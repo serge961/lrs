@@ -19,7 +19,10 @@
 <form action="" method="POST">
   <input type="hidden" id="_method" name = "_method" value ="DELETE"/>
   <input type="hidden" name="id" value="<?= $note['id']?>">
-  <button type="submit">Удалить</button>
+  <a class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="/notes/edit?id=<?= $note["id"]?>">Редактивровать</a>
+  <!-- <a class="font-medi rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 btn-primary bg-sky-500 hover:bg-sky-700" href="/notes/edit?id=<?= $note["id"]?>">Редактивровать</a> -->
+  <button class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" type="submit">Удалить</button>
+  <!-- <button class="font-medi rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 bg-red-500 hover:bg-red-700" type="submit">Удалить</button>-->
 </form>
     </div>
   </main>

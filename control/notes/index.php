@@ -1,6 +1,5 @@
 <?php
 use Core\Database;
-use Core\Container;
 use Core\App;
 
 /* $config = require base_path('config.php');
