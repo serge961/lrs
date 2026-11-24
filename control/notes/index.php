@@ -5,6 +5,7 @@ use Core\App;
 /* $config = require base_path('config.php');
 $db=new Database($config['database']);
  */
+$_SESSION['user'] = 'Sergey';
 
 $db = App::resolve(Database::class);
 

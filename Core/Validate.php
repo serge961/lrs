@@ -1,7 +1,7 @@
 <?php
 namespace Core;
 class Validate{
-    public static function string($value, $min = 1, $max = NFC){
+    public static function string($value, $min = 1, $max = 'NFC'){
         $value = trim($value);
         return strlen($value) >= $min && strlen($value) <= $max;
 
