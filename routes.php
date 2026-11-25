@@ -1,32 +1,32 @@
 <?php
 /* 
 return [
-    '/' => 'control/index.php',
-    '/about'=> 'control/about.php',
-    '/notes'=> 'control/notes/index.php',
-    '/note'=> 'control/notes/show.php',
-    '/notes/create'=> 'control/notes/create.php',
-    '/contact'=>'control/contact.php',
+    '/' => 'index.php',
+    '/about'=> 'about.php',
+    '/notes'=> 'notes/index.php',
+    '/note'=> 'notes/show.php',
+    '/notes/create'=> 'notes/create.php',
+    '/contact'=>'contact.php',
 ];
  */
 
-$routes->get('/', 'control/index.php');
-$routes->get('/about', 'control/about.php');
+$routes->get('/', 'index.php');
+$routes->get('/about', 'about.php');
 
-$routes->get('/notes', 'control/notes/index.php')->only('auth');
-$routes->get('/note', 'control/notes/show.php')->only('auth');
-$routes->delete('/note', 'control/notes/destroy.php')->only('auth');
-$routes->post('/note', 'control/notes/store.php')->only('auth');
+$routes->get('/notes', 'notes/index.php')->only('auth');
+$routes->get('/note', 'notes/show.php')->only('auth');
+$routes->delete('/note', 'notes/destroy.php')->only('auth');
+$routes->post('/note', 'notes/store.php')->only('auth');
 
-$routes->get('/notes/create', 'control/notes/create.php')->only('auth');
-$routes->get('/notes/edit', 'control/notes/edit.php')->only('auth');
-$routes->patch('/note', 'control/notes/update.php')->only('auth');
+$routes->get('/notes/create', 'notes/create.php')->only('auth');
+$routes->get('/notes/edit', 'notes/edit.php')->only('auth');
+$routes->patch('/note', 'notes/update.php')->only('auth');
 
-$routes->get('/contact', 'control/contact.php');
+$routes->get('/contact', 'contact.php');
 
-$routes->get('/register', 'control/registers/create.php')->only('guest');
-$routes->post('/register','control/registers/store.php')->only('guest');
+$routes->get('/register', 'registers/create.php')->only('guest');
+$routes->post('/register','registers/store.php')->only('guest');
 
-$routes->get('/login', 'control/session/create.php' )->only('guest');
-$routes->post('/session', 'control/session/store.php' )->only('guest');
-$routes->delete('/session', 'control/session/destroy.php' )->only('auth');
+$routes->get('/login', 'session/create.php' )->only('guest');
+$routes->post('/session', 'session/store.php' )->only('guest');
+$routes->delete('/session', 'session/destroy.php' )->only('auth');

@@ -39,16 +39,7 @@ function abort($code = '404'){
 
 }
 
-function login($user){
-    
-    $_SESSION['user'] = 
-        [
-            'email' => $user['email']
-        ];
-
-
-        session_regenerate_id(true);
-
-        header ("Location: /");
-        exit();
+function redirect(string $url) {
+    header ("Location: {$url}");
+    exit();
 }
